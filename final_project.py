@@ -20,10 +20,10 @@ st.sidebar.header('User Input Features')
 
 def user_input_features():
     drvr_fatl_col_bmiles=st.sidebar.slider('No. of drivers involved in fatal collision',int(X_train.drvr_fatl_col_bmiles.min()),int(X_train.drvr_fatl_col_bmiles.max()),int(X_train.drvr_fatl_col_bmiles.mean()))
-    perc_fatl_speed=st.sidebar.slider('% of drivers involved in over-speeding',X_train.perc_fatl_speed.min(),X_train.perc_fatl_speed.max(),int(X_train.perc_fatl_speed.mean()))
-    perc_fatl_alcohol=st.sidebar.slider('% of drivers alcohol impaired',X_train.perc_fatl_alcohol.min(),X_train.perc_fatl_alcohol.max(),int(X_train.perc_fatl_alcohol.mean()))
-    perc_fatl_1st_time=st.sidebar.slider('% of drivers who had not been in accidents',X_train.perc_fatl_1st_time.min(),X_train.perc_fatl_1st_time.max(),int(X_train.perc_fatl_1st_time.mean()))
-    million_miles_annually=st.sidebar.slider('million_miles_annually',X_train.million_miles_annually.min(),X_train.million_miles_annually.max(),int(X_train.million_miles_annually.mean()))
+    perc_fatl_speed=st.sidebar.slider('% of drivers involved in over-speeding',int(X_train.perc_fatl_speed.min()),int(X_train.perc_fatl_speed.max()),int(X_train.perc_fatl_speed.mean()))
+    perc_fatl_alcohol=st.sidebar.slider('% of drivers alcohol impaired',int(X_train.perc_fatl_alcohol.min()),int(X_train.perc_fatl_alcohol.max()),int(X_train.perc_fatl_alcohol.mean()))
+    perc_fatl_1st_time=st.sidebar.slider('% of drivers who had not been in accidents',int(X_train.perc_fatl_1st_time.min()),int(X_train.perc_fatl_1st_time.max()),int(X_train.perc_fatl_1st_time.mean()))
+    million_miles_annually=st.sidebar.slider('million_miles_annually',int(X_train.million_miles_annually.min()),int(X_train.million_miles_annually.max()),int(X_train.million_miles_annually.mean()))
 
     data={'drvr_fatl_col_bmiles':drvr_fatl_col_bmiles,
     'perc_fatl_speed':perc_fatl_speed,
