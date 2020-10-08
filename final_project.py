@@ -6,7 +6,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 
 st.write("""
-# This app predict the accident prone states of US
+# Accidents Prediction App
+
+This app predicts the most accident prone state of USA
 """)
 st.write('---')
 road_accidents=pd.read_csv('road-accidents.csv',sep='|',comment='#')
@@ -38,6 +40,7 @@ def user_input_features():
 df1=user_input_features()
 st.write(df1)
 st.write('---')
+
 
 clf=RandomForestClassifier()
 clf.fit(X_train,y_train)
